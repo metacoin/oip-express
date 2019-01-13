@@ -9,7 +9,7 @@ oip-express is a simple webapp boilerplate using expressjs, pug, and js-oip to b
 npm install
 ```
 
-## Building
+## Build
 Call the babel binary directly to compile js to the lib directory:
 ```
 ./node_modules/.bin/babel src --out-dir lib
@@ -19,7 +19,7 @@ or, use our builtin custom package script:
 npm run compile
 ```
 
-## Running
+## Run
 After compiling with babel, start the webserver:
 ```
 npm start
