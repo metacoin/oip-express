@@ -23,6 +23,11 @@ After compiling with babel, start the webserver:
 npm start
 ```
 
+For convenience, run both commands in sequence:
+```
+npm run compile && npm start
+```
+
 ## Configuration
 Configuration is done through modifying `src/index.js` at the moment. In the future a configuration file is planned. 
 ```
