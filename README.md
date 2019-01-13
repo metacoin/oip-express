@@ -5,6 +5,7 @@
 oip-express is a simple webapp boilerplate using expressjs, pug, and js-oip to build a single-page FLO webapp. 
 
 ## Install
+Clone this repository and use `npm install` to install oip-express.
 ```
 npm install
 ```
