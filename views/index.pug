@@ -1,0 +1,55 @@
+doctype html
+html(lang='en-GB')
+  head
+    title FLO Blockchain: tZERO DLR Records
+
+    link(rel="stylesheet" type="text/css" href="style.css")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="icon" href="favicon-v2.png")
+    meta(property="og:title" content="FLO Blockchain: tZERO DLR Records")
+    meta(property="og:site_name" content="FLO Blockchain")
+    meta(property="og:url" content="https://floblockchain.org/tzero/")
+    meta(
+        property="og:description"
+        content="Explore the most recent tZERO DLR records in the FLO Blockchain using this floData explorer."
+    )
+    meta(property="og:type" content="website")
+    meta(property="og:image" content="https://floblockchain.org/FLO.png")
+
+  body
+    div(id="top" class="floblockchain-header")
+      h1
+        a(href="https://floblockchain.org") FLO Blockchain
+    div(style="text-align:center;")
+      img(src="https://floblockchain.org/FLO.png" alt="FLO")
+      div(class="floblockchain-text top")
+        h3 Recent tZERO DLR Records
+        a(id="top-link" href="#whats-this") Learn More
+
+    table(id="tbl")
+      thead
+        tr
+          td floData
+          td time
+          td txid
+          td block
+
+      - var classcount=0;
+      each tx in data
+        tr(class=(1+classcount++)%2 ? 'bg' : '')
+          td(class="floData")= tx.tx.floData
+          td
+            span(title=tx.tx.time)= tx.tx.timeago
+          td
+            a(href=("http://network.flo.cash/tx/" + tx.tx.txid) target="_blank") #{tx.tx.txid.substring(0, 6) + "..."}
+          td
+            a(href=("http://network.flo.cash/block/" + tx.tx.blockhash) target="_blank") #{tx.tx.blockhash.substring(0, 6) + "..."}
+    div(class="floblockchain-text")
+      h2(id="whats-this") About
+      p These are the recent tZERO DLRs recorded in the FLO blockchain. Click on the txid or block hash to navigate to the explorer for further research and verification of individual DLR records.
+      h3 tZERO DLR
+      p A DLR (Digital Locate Receipt) is a digitized version of a traditional REG SHO locate. tZERO’s DLR platform captures all inventory and audit trail information and stores that information permanently on the blockchain.
+      p Learn more about the tZERO DLR system here: [#[a(href="https://www.youtube.com/watch?v=VjM-m8IZrT0") YouTube]]
+      h3 How was it made?
+      p This page was created using #[a(href="https://github.com/oipwg/js-oip") js-oip], a nodejs library that allows you to interact with the Open Index Protocol and the FLO blockchain. The js-oip package is also available on #[a(href="https://www.npmjs.com/package/js-oip") npm].
+      p [#[a(href="#top") Back to top]]
