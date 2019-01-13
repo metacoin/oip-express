@@ -36,7 +36,7 @@ In the future these repos will be separated and the oip-express app will contain
 
 ## Documentation
 Documentation for packages oip-express depends on can be found in the following repositories:
-* [js-oip](https://www.npmjs.com/package/js-oip) | [github](https://github.com/oipwg/js-oip))
+* [js-oip](https://www.npmjs.com/package/js-oip) | ([github](https://github.com/oipwg/js-oip))
 * [pug](https://pugjs.org/api/getting-started.html)
 * [expressjs](https://expressjs.com/)
 
