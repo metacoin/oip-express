@@ -35,6 +35,8 @@ html(lang='en-GB')
           td block
 
       - var classcount=0;
+      script 
+        | console.log(!{JSON.stringify(data)});
       each tx in data
         tr(class=(1+classcount++)%2 ? 'bg' : '')
           td(class="floData")= tx.tx.floData
